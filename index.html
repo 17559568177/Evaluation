@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FBF6F0">
+<meta name="description" content="知我 SELF NOTE · 两个分步的小测试，一张可以带走的卡片。">
+<title>知我 SELF NOTE · 认识一下自己</title>
+</head>
+<body data-theme="love">
+<script>
+  // Vue Router 完成首次导航前，先按 URL 预置皮肤，避免深色路由首帧闪白、星图错色
+  document.body.dataset.theme = location.hash.indexOf('#/zodiac') === 0 ? 'zodiac' : 'love'
+</script>
+
+<div class="ambient" aria-hidden="true"></div>
+
+<div id="app"></div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

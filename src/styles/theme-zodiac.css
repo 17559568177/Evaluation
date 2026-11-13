@@ -1,0 +1,229 @@
+/* ============================================================
+   皮肤 A · 星夜手札
+   用于「星座星语」路由（首页对应卡片亦使用此皮肤）
+   ============================================================ */
+
+body[data-theme="zodiac"]{
+  --bg:#111728;
+  --bg-2:#1B2340;
+  --surface:rgba(38,49,84,.52);
+  --ink:#F3EADA;
+  --ink-2:#C6C3D8;
+  --ink-3:#8A88A8;
+  --accent:#D9BE8F;
+  --accent-2:#EED5A8;
+  --soft:#8B87B8;
+  --line:rgba(217,190,143,.18);
+  --line-strong:rgba(217,190,143,.38);
+  --chip:rgba(139,135,184,.13);
+  --shadow:0 26px 64px -30px rgba(0,0,0,.78);
+  --glow:
+    radial-gradient(62% 40% at 52% -8%,rgba(139,135,184,.34),transparent 72%),
+    radial-gradient(50% 36% at 98% 76%,rgba(217,190,143,.11),transparent 74%),
+    linear-gradient(180deg,#121830 0%,#0E1424 58%,#151B32 100%);
+}
+
+body[data-theme="zodiac"] .site-head,
+body[data-theme="zodiac"] .site-foot{border-color:rgba(217,190,143,.16)}
+body[data-theme="zodiac"] .brand-en,
+body[data-theme="zodiac"] .head-route,
+body[data-theme="zodiac"] .head-link,
+body[data-theme="zodiac"] .foot-mark,
+body[data-theme="zodiac"] .site-foot{color:#8E8CAA}
+body[data-theme="zodiac"] .head-link:hover{color:var(--accent)}
+body[data-theme="zodiac"] .display{text-shadow:0 2px 24px rgba(217,190,143,.18)}
+body[data-theme="zodiac"] .btn-primary{background:#F0E3CB;color:#171E34;box-shadow:0 18px 42px -20px rgba(217,190,143,.5)}
+body[data-theme="zodiac"] .btn-primary:hover{box-shadow:0 18px 42px -16px rgba(217,190,143,.7)}
+body[data-theme="zodiac"] .btn-accent{background:var(--accent);color:#171E34}
+body[data-theme="zodiac"] .btn-outline{color:var(--ink);border-color:rgba(217,190,143,.4)}
+body[data-theme="zodiac"] .btn-outline:hover{color:var(--accent);border-color:var(--accent)}
+body[data-theme="zodiac"] .tag{border-color:rgba(217,190,143,.3)}
+body[data-theme="zodiac"] .tag i{background:var(--accent)}
+body[data-theme="zodiac"] .section-no::after{background:linear-gradient(90deg,rgba(217,190,143,.42),transparent)}
+body[data-theme="zodiac"] .input,
+body[data-theme="zodiac"] .select,
+body[data-theme="zodiac"] .seg-item{background:rgba(38,49,84,.55)}
+body[data-theme="zodiac"] .seg-item.is-on{background:rgba(217,190,143,.13);color:var(--accent-2)}
+/* ---------- 星座星语 · 选项（双彗星 + 星尘雨） ---------- */
+body[data-theme="zodiac"] .option{background:rgba(38,49,84,.42)}
+body[data-theme="zodiac"] .option:hover{background:rgba(139,135,184,.18);color:#FFF7E8}
+body[data-theme="zodiac"] .option.is-picked,
+body[data-theme="zodiac"] .option.is-flash{
+  border-color:var(--accent);
+  box-shadow:0 12px 30px -18px rgba(217,190,143,.55),inset 0 0 28px rgba(217,190,143,.1);
+}
+body[data-theme="zodiac"] .option-fill{
+  background:linear-gradient(100deg,
+    rgba(139,135,184,.28) 0%,
+    rgba(217,190,143,.22) 42%,
+    rgba(217,190,143,.12) 100%);
+}
+body[data-theme="zodiac"] .option.is-flash .option-fill{
+  animation:zodiacSkyFill .34s cubic-bezier(.2,.8,.25,1) both;
+}
+body[data-theme="zodiac"] .option-shine{display:none}
+body[data-theme="zodiac"] .option.is-picked .option-key,
+body[data-theme="zodiac"] .option.is-flash .option-key{background:var(--accent);color:#171E34}
+body[data-theme="zodiac"] .option-check{
+  color:var(--accent-2);font-family:"Segoe UI Symbol","Arial Unicode MS",sans-serif;
+  font-variant-emoji:text;
+}
+
+/* 双彗星：一前一后斜扫 */
+body[data-theme="zodiac"] .fx-comet{
+  top:0;left:-36%;width:52%;height:100%;
+  background:linear-gradient(108deg,
+    transparent 0%,
+    rgba(217,190,143,0) 24%,
+    rgba(240,227,203,.7) 46%,
+    rgba(139,135,184,.28) 60%,
+    transparent 78%);
+  filter:blur(.3px);opacity:0;transform:translateX(0) skewX(-14deg);
+}
+body[data-theme="zodiac"] .fx-comet--b{
+  top:18%;width:38%;height:70%;
+  background:linear-gradient(112deg,
+    transparent 0%,
+    rgba(240,227,203,.0) 30%,
+    rgba(240,227,203,.45) 50%,
+    transparent 72%);
+  opacity:0;
+}
+body[data-theme="zodiac"] .option.is-flash .fx-comet--a{
+  animation:zodiacComet .4s cubic-bezier(.12,.8,.28,1) both;
+}
+body[data-theme="zodiac"] .option.is-flash .fx-comet--b{
+  animation:zodiacComet .38s cubic-bezier(.15,.78,.3,1) .05s both;
+}
+/* 细星轨 */
+body[data-theme="zodiac"] .fx-trail{
+  top:48%;left:-20%;width:70%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(240,227,203,.65),transparent);
+  opacity:0;transform:translateX(0) scaleX(.4);
+  box-shadow:0 0 8px rgba(217,190,143,.5);
+}
+body[data-theme="zodiac"] .option.is-flash .fx-trail{
+  animation:zodiacTrail .36s cubic-bezier(.2,.75,.3,1) .02s both;
+}
+/* 星点雨 */
+body[data-theme="zodiac"] .fx-star{
+  left:-6%;top:var(--t);width:var(--s);height:var(--s);margin-top:calc(var(--s) / -2);
+  border-radius:50%;background:#F0E3CB;
+  box-shadow:0 0 7px 1px rgba(217,190,143,.95),0 0 1px #fff;
+  opacity:0;transform:translateX(0) scale(.35);
+}
+body[data-theme="zodiac"] .option.is-flash .fx-star{
+  animation:zodiacStar .42s cubic-bezier(.18,.75,.3,1) var(--d) both;
+}
+/* 十字闪光 */
+body[data-theme="zodiac"] .fx-spark{
+  left:8%;top:var(--t);width:10px;height:10px;margin:-5px 0 0 -5px;
+  opacity:0;
+  background:
+    linear-gradient(#F0E3CB,#F0E3CB) center/10px 1.5px no-repeat,
+    linear-gradient(#F0E3CB,#F0E3CB) center/1.5px 10px no-repeat;
+  filter:drop-shadow(0 0 4px rgba(240,227,203,.9));
+}
+body[data-theme="zodiac"] .option.is-flash .fx-spark{
+  animation:zodiacSpark .36s ease-out var(--d) both;
+}
+
+@keyframes zodiacSkyFill{
+  0%{transform:scaleX(0);opacity:.3}
+  100%{transform:scaleX(1);opacity:1}
+}
+@keyframes zodiacComet{
+  0%{opacity:0;transform:translateX(0) skewX(-14deg)}
+  22%{opacity:1}
+  100%{opacity:0;transform:translateX(290%) skewX(-14deg)}
+}
+@keyframes zodiacTrail{
+  0%{opacity:0;transform:translateX(0) scaleX(.3)}
+  35%{opacity:1}
+  100%{opacity:0;transform:translateX(180%) scaleX(1)}
+}
+@keyframes zodiacStar{
+  0%{opacity:0;transform:translateX(0) scale(.25)}
+  25%{opacity:1;transform:translateX(12%) scale(1.2)}
+  100%{opacity:0;transform:translateX(var(--dx,540%)) scale(.5)}
+}
+@keyframes zodiacSpark{
+  0%{opacity:0;transform:translateX(0) scale(.2) rotate(0deg)}
+  40%{opacity:1;transform:translateX(40%) scale(1.15) rotate(18deg)}
+  100%{opacity:0;transform:translateX(420%) scale(.4) rotate(40deg)}
+}
+
+body[data-theme="zodiac"] .seg-item.is-on{
+  box-shadow:0 10px 26px -16px rgba(217,190,143,.55);
+}
+body[data-theme="zodiac"] .notice{background:rgba(139,135,184,.12)}
+body[data-theme="zodiac"] .note-box{background:rgba(139,135,184,.12)}
+body[data-theme="zodiac"] .pull-quote{color:var(--accent-2)}
+body[data-theme="zodiac"] .toast{background:#F0E3CB;color:#171E34}
+body[data-theme="zodiac"] .field-error{color:#E8A08B}
+
+/* ---------- 首页 · 星座星语卡 ---------- */
+.home-card--zodiac{
+  background:
+    radial-gradient(90% 120% at 100% 0%,rgba(139,135,184,.32),transparent 68%),
+    linear-gradient(140deg,#1C2542 0%,#141B32 58%,#101629 100%);
+  border-color:rgba(217,190,143,.30);color:#F3EADA;
+}
+.home-card--zodiac .hc-no,.home-card--zodiac .hc-desc,.home-card--zodiac .hc-foot{color:#B4B1C9}
+.home-card--zodiac .hc-title{color:#F5E9D2}
+.home-card--zodiac .hc-foot{border-top:1px solid rgba(217,190,143,.22);padding-top:12px;margin-top:20px}
+.home-card--zodiac .hc-orbit{right:-52px;top:-52px;width:210px;height:210px;opacity:.55}
+.home-card--zodiac .hc-moon{
+  right:30px;top:32px;width:34px;height:34px;border-radius:50%;
+  background:#EED5A8;box-shadow:0 0 26px 6px rgba(217,190,143,.32);opacity:.9;
+}
+.home-card--zodiac .hc-moon::after{
+  content:"";position:absolute;right:-6px;top:-5px;width:34px;height:34px;border-radius:50%;
+  background:#161E36;
+}
+.home-card--zodiac .hc-arrow{color:var(--accent)}
+.home-card--zodiac::after{
+  content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(217,190,143,.6),transparent);
+}
+
+/* ---------- 星语 · 输入页 ---------- */
+.zodiac-form{display:flex;flex-direction:column;gap:26px}
+.zodiac-orbit-deco{align-self:center;width:150px;height:150px;opacity:.72;margin:2px 0 6px}
+.seg-item .sg-icon{color:var(--accent)}
+
+/* ---------- 星语 · 结果卡 ---------- */
+.result-card--zodiac{
+  background:
+    radial-gradient(80% 62% at 100% 0%,rgba(139,135,184,.30),transparent 72%),
+    linear-gradient(165deg,rgba(38,49,84,.86),rgba(20,27,50,.92));
+  border-color:rgba(217,190,143,.36);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+}
+.result-card--zodiac::before{
+  content:"";position:absolute;left:0;top:0;width:100%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(217,190,143,.75),transparent);
+}
+.result-card--zodiac .rc-orbit{
+  right:-74px;top:-74px;width:250px;height:250px;border-radius:50%;
+  border:1px solid rgba(217,190,143,.20);
+  box-shadow:0 0 0 34px rgba(217,190,143,.045),0 0 0 70px rgba(217,190,143,.03);
+}
+.result-card--zodiac .rc-serial{
+  position:absolute;left:28px;bottom:16px;
+  font-family:var(--font-mono);font-size:9px;letter-spacing:.18em;color:rgba(217,190,143,.5);
+}
+body[data-theme="zodiac"] .result-card--zodiac .result-title{color:#F7ECD6;text-shadow:0 2px 22px rgba(217,190,143,.22)}
+body[data-theme="zodiac"] .result-card--zodiac .result-desc{color:#C6C3D8}
+body[data-theme="zodiac"] .sign-cell{background:rgba(139,135,184,.10);border-color:rgba(217,190,143,.22)}
+body[data-theme="zodiac"] .sign-glyph{color:var(--accent-2);text-shadow:0 0 18px rgba(217,190,143,.4)}
+body[data-theme="zodiac"] .daily-quote{color:#F0E3CB}
+body[data-theme="zodiac"] .bar-fill{background:linear-gradient(90deg,#8B87B8,#D9BE8F)}
+body[data-theme="zodiac"] .rarity b{color:var(--accent-2)}
+body[data-theme="zodiac"] .bar-label span:last-child{color:var(--accent-2)}
+body[data-theme="zodiac"] .progress-fill{background:linear-gradient(90deg,#8B87B8,#D9BE8F)}
+body[data-theme="zodiac"] .alt-card{border-color:rgba(217,190,143,.2)}
+
+/* ---------- 星语 · 生成过渡 ---------- */
+body[data-theme="zodiac"] .loading-orbit svg{color:var(--accent)}
+body[data-theme="zodiac"] .loading-core{color:var(--accent-2);text-shadow:0 0 26px rgba(217,190,143,.5)}
