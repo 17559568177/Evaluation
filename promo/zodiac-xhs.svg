@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1440" viewBox="0 0 1080 1440">
+  <defs>
+    <linearGradient id="zbg" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#151B32"/>
+      <stop offset="50%" stop-color="#111728"/>
+      <stop offset="100%" stop-color="#0E1424"/>
+    </linearGradient>
+    <radialGradient id="zneb" cx="70%" cy="8%" r="45%">
+      <stop offset="0%" stop-color="#8B87B8" stop-opacity=".34"/>
+      <stop offset="100%" stop-color="#8B87B8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="zgold" cx="95%" cy="75%" r="35%">
+      <stop offset="0%" stop-color="#D9BE8F" stop-opacity=".14"/>
+      <stop offset="100%" stop-color="#D9BE8F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="1440" fill="url(#zbg)"/>
+  <rect width="1080" height="1440" fill="url(#zneb)"/>
+  <rect width="1080" height="1440" fill="url(#zgold)"/>
+  <g fill="#F0E3CB">
+    <circle cx="140" cy="160" r="1.4" opacity=".7"/><circle cx="880" cy="180" r="1.6" opacity=".8"/>
+    <circle cx="320" cy="240" r="1" opacity=".45"/><circle cx="960" cy="360" r="1.1" opacity=".5"/>
+    <circle cx="200" cy="520" r="1.2" opacity=".55"/><circle cx="740" cy="480" r="1.5" opacity=".7"/>
+    <circle cx="860" cy="980" r="1.4" opacity=".65"/><circle cx="90" cy="900" r="1.1" opacity=".5"/>
+  </g>
+  <g transform="translate(860,300)" fill="none" stroke="#D9BE8F" stroke-opacity=".28">
+    <circle r="110" stroke-width="1"/>
+    <circle r="78" stroke-width="1" stroke-opacity=".18"/>
+    <circle r="3" cx="78" cy="0" fill="#D9BE8F" stroke="none" opacity=".8"/>
+  </g>
+  <text x="80" y="96" fill="#D9BE8F" font-family="Consolas,monospace" font-size="20" letter-spacing="5">SELF NOTE  /  02</text>
+  <text x="80" y="168" fill="#F3EADA" font-family="Microsoft YaHei,SimSun,serif" font-size="42" font-weight="700">知我</text>
+  <text x="176" y="164" fill="#8A88A8" font-family="Consolas,monospace" font-size="18" letter-spacing="3">SELF NOTE</text>
+  <rect x="80" y="210" width="64" height="2" fill="#D9BE8F" opacity=".7"/>
+  <text x="80" y="310" fill="#D9BE8F" font-family="Consolas,monospace" font-size="20" letter-spacing="4">STAR NOTE</text>
+  <text x="80" y="400" fill="#F7ECD6" font-family="Microsoft YaHei,SimSun,serif" font-size="58" font-weight="700">你的星语，</text>
+  <text x="80" y="486" fill="#F7ECD6" font-family="Microsoft YaHei,SimSun,serif" font-size="58" font-weight="700">写在哪个夜晚</text>
+  <text x="80" y="580" fill="#C6C3D8" font-family="Microsoft YaHei,sans-serif" font-size="26">三步，一点点把星图对准你。</text>
+  <text x="80" y="624" fill="#C6C3D8" font-family="Microsoft YaHei,sans-serif" font-size="26">出生坐标、夜空偏好、内在节奏。</text>
+  <rect x="80" y="720" width="280" height="180" rx="4" fill="#262f4f" stroke="#5a4f3a"/>
+  <text x="220" y="800" text-anchor="middle" fill="#EED5A8" font-family="Microsoft YaHei,sans-serif" font-size="28">太阳</text>
+  <text x="220" y="850" text-anchor="middle" fill="#F3EADA" font-family="Microsoft YaHei,sans-serif" font-size="22">SUN</text>
+  <rect x="400" y="720" width="280" height="180" rx="4" fill="#262f4f" stroke="#5a4f3a"/>
+  <text x="540" y="800" text-anchor="middle" fill="#EED5A8" font-family="Microsoft YaHei,sans-serif" font-size="28">月亮</text>
+  <text x="540" y="850" text-anchor="middle" fill="#F3EADA" font-family="Microsoft YaHei,sans-serif" font-size="22">MOON</text>
+  <rect x="720" y="720" width="280" height="180" rx="4" fill="#262f4f" stroke="#5a4f3a"/>
+  <text x="860" y="800" text-anchor="middle" fill="#EED5A8" font-family="Microsoft YaHei,sans-serif" font-size="28">上升</text>
+  <text x="860" y="850" text-anchor="middle" fill="#F3EADA" font-family="Microsoft YaHei,sans-serif" font-size="22">RISING</text>
+  <text x="80" y="980" fill="#C6C3D8" font-family="Microsoft YaHei,sans-serif" font-size="24">日月升组合 · 三维星语倾向 · 今日一句</text>
+  <text x="80" y="1034" fill="#8A88A8" font-family="Microsoft YaHei,sans-serif" font-size="22">约 2 分钟 · 简版推算 · 仅供娱乐</text>
+  <rect x="80" y="1120" width="920" height="1" fill="#5a4f3a"/>
+  <text x="80" y="1200" fill="#F0E3CB" font-family="Microsoft YaHei,SimSun,serif" font-size="32" font-weight="700">先认识一下自己</text>
+  <text x="80" y="1260" fill="#8A88A8" font-family="Microsoft YaHei,sans-serif" font-size="22">不登录 · 生日只用于本机推算 · 可生成星语海报</text>
+  <text x="80" y="1340" fill="#D9BE8F" font-family="Consolas,monospace" font-size="18" letter-spacing="3">XIAOHONGSHU  ·  ZODIAC</text>
+</svg>
